@@ -3,6 +3,11 @@ import Image from "next/image";
 import img1 from '../../../public/Screenshot 2024-08-19 223339.png'
 import img2 from '../../../public/Screenshot 2024-08-19 223353.png'
 import banner from '../../../public/Screenshot 2024-08-19 022627.png'
+import img3 from '../../../public/Screenshot 2024-08-19 223411.png'
+import img4 from '../../../public/Screenshot 2024-08-19 223432.png'
+import img5 from '../../../public/Screenshot 2024-08-19 223441.png'
+import img6 from '../../../public/Screenshot 2024-08-19 223454.png'
+import img7 from '../../../public/Screenshot 2024-08-19 223503.png'
 
 const About = () => {
     return (
@@ -65,8 +70,67 @@ const About = () => {
   </div>
 </div>     
 
-            </section>
+   </section>
 
+   <section className=" bg-[#fff7f3] pb-20">
+     <div className="w-[80%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+       
+     <div className="h-72 w-full ">
+                <div className="h-full flex flex-col justify-center gap-3  font-semibold text-black text-5xl py-10">
+                <p className='uppercase tracking-widest text-xl text-[#f29269] font-medium'>medical services</p>
+                      <h1>We're Providing</h1>
+                      <h1>Best Services.</h1>
+                   </div>
+                   
+                </div>
+
+                <div className="h-72 w-full border-[1px] border-black">
+                <div className="h-[83.2%] flex flex-col justify-center gap-3  font-semibold text-black text-3xl p-10">
+                <Image src={img3} alt="logo"></Image>
+                      <h1>eye care</h1>
+                      <p className="text-base text-slate-400">we understand the importance of clear vision and its impact on your.</p>
+                   </div>
+                   <button className="btn rounded-none w-full bg-[#f7a582] border-none text-white">Read More</button>
+                </div>
+
+                <div className="h-72 w-full border-[1px] border-black">
+                <div className="h-[83.2%] flex flex-col justify-center gap-3  font-semibold text-black text-3xl p-10">
+                <Image src={img4} alt="logo"></Image>
+                      <h1>medical checkup</h1>
+                      <p className="text-base text-slate-400">During your medical checkup, our skilled healthcare professionals.</p>
+                   </div>
+                   <button className="btn rounded-none w-full bg-[#f7a582] border-none text-white">Read More</button>
+                </div>
+
+                <div className="h-72 w-full border-[1px] border-black">
+                <div className="h-[83.2%] flex flex-col justify-center gap-3  font-semibold text-black text-3xl p-10">
+                <Image src={img5} alt="logo"></Image>
+                      <h1>dental care</h1>
+                      <p className="text-base text-slate-400">we are passionate about providing top-notch dental care to help you.</p>
+                   </div>
+                   <button className="btn rounded-none w-full bg-[#f7a582] border-none text-white">Read More</button>
+                </div>
+
+                <div className="h-72 w-full border-[1px] border-black">
+                <div className="h-[83.2%] flex flex-col justify-center gap-3  font-semibold text-black text-3xl p-10">
+                <Image src={img6} alt="logo"></Image>
+                      <h1>laboratory service</h1>
+                      <p className="text-base text-slate-400">we understand the critical role that accurate diagnostics play in guiding.</p>
+                   </div>
+                   <button className="btn rounded-none w-full bg-[#f7a582] border-none text-white">Read More</button>
+                </div>
+
+                <div className="h-72 w-full border-[1px] border-black">
+                <div className="h-[83.2%] flex flex-col justify-center gap-3  font-semibold text-black text-3xl p-10">
+                <Image src={img7} alt="logo"></Image>
+                      <h1>Patient-centered</h1>
+                      <p className="text-base text-slate-400">hospitals, or clinics with positive reviews and ratings from patients.</p>
+                   </div>
+                   <button className="btn rounded-none w-full bg-[#f7a582] border-none text-white">Read More</button>
+                </div>
+     </div>
+
+   </section>
 
 
         </div>
