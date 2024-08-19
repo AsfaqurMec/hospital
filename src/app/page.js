@@ -1,10 +1,11 @@
 import Image from "next/image";
 import Navbar from "./Components/Navbar";
+import Banner from "./Components/Banner";
 
 export default function Home() {
   return (
-    <div className="h-screen bg-[#07332f]">
-        <h1>hrghrjkgrghtr</h1>
+    <div className=" bg-[#07332f]">
+        <Banner></Banner>
         
     </div>
     // <main className="flex min-h-screen flex-col items-center justify-between p-24">

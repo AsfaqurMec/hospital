@@ -3,13 +3,13 @@ import logo from '../../../public/Screenshot 2024-08-19 162502.png'
 
 const Navbar = () => {
     return (
-        <div className="bg-[#07332f] w-full border-b-[1px] border-b-[#ffffff41]">
-            <div className="navbar bg-transparent w-[90%] mx-auto items-center flex py-3 ">
+        <div className="bg-[#07332f] w-full border-b-[1px] border-b-[#ffffff41] h-auto md:h-20 lg:h-auto">
+            <div className="navbar bg-transparent w-[90%] mx-auto items-center flex py-3">
   <div className="flex-1">
-    <a className="btn btn-ghost text-xl"><Image src={logo} alt="logo" className="h-16 w-44"></Image></a>
+    <a className="btn btn-ghost text-xl"><Image src={logo} alt="logo" className="md:h-16 md:w-44 w-32 h-12"></Image></a>
   </div>
   <div className="flex-none mt-2">
-    <ul className="menu menu-horizontal px-1">
+    <ul className="menu menu-horizontal px-1 hidden lg:flex">
       <li className="font-medium text-xl text-white"><a>Home</a></li>
       <li className="font-medium text-xl text-white"><a>About Us</a></li>
       <li className="font-medium text-xl text-white"><a>Services</a></li>
