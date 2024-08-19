@@ -6,7 +6,7 @@ import banner from '../../../public/Screenshot 2024-08-19 022530.png'
 const Banner = () => {
     return (
         <div>
-       <div className="hero bg-[#07332f] min-h-screen">
+       <div className="hero bg-[#07332f] pb-20 lg:pb-0 min-h-screen">
   <div className="hero-content flex-col lg:flex-row-reverse px-3 gap-20 lg:gap-0">
     <Image src={banner} alt='banner' className="w-[90%] mx-auto md:max-w-xl"></Image>
     {/* <img
