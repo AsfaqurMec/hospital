@@ -8,6 +8,7 @@ import img4 from '../../../public/Screenshot 2024-08-19 223432.png'
 import img5 from '../../../public/Screenshot 2024-08-19 223441.png'
 import img6 from '../../../public/Screenshot 2024-08-19 223454.png'
 import img7 from '../../../public/Screenshot 2024-08-19 223503.png'
+import img8 from '../../../public/Screenshot 2024-08-19 223518.png'
 
 const About = () => {
     return (
@@ -16,7 +17,7 @@ const About = () => {
 
             <div className="w-[80%] mx-auto flex flex-col lg:flex-row">
                 <div className="h-56 w-full lg:w-1/3 bg-[#f7a582]">
-                <div className="h-[78.5%] flex flex-col justify-center font-semibold text-white text-3xl">
+                <div className="h-[78.6%] flex flex-col justify-center font-semibold text-white text-3xl">
                    <h1 className="pl-5 pt-5">Don't Hesitate To</h1>
                    <h1 className="pl-5 ">Contact us</h1>
                    </div>
@@ -85,7 +86,7 @@ const About = () => {
                 </div>
 
                 <div className="h-72 w-full border-[1px] border-black">
-                <div className="h-[83.2%] flex flex-col justify-center gap-3  font-semibold text-black text-3xl p-10">
+                <div className="h-[83.1%] flex flex-col justify-center gap-3  font-semibold text-black text-3xl p-10">
                 <Image src={img3} alt="logo"></Image>
                       <h1>eye care</h1>
                       <p className="text-base text-slate-400">we understand the importance of clear vision and its impact on your.</p>
@@ -132,6 +133,21 @@ const About = () => {
 
    </section>
 
+   <section className="bg-[#07332f] w-full ">
+
+     <div className="flex flex-col gap-10 justify-evenly items-center lg:flex-row py-14">
+        <div className="flex flex-col justify-center lg:flex-row items-center gap-8 text-white">
+            <Image src={img8} alt="o"></Image>
+            <div className="text-center lg:text-left">
+                <h1 className="text-4xl mb-5">Open For Appointments</h1>
+                <p>we are delighted to announce that our doors are open, and we are now accepting <br /> appointments to serve you better.</p>
+            </div>
+            
+        </div>
+        <button className="btn bg-transparent font-semibold text-xl rounded-3xl border-2 text-[#f7a582] btn-outline hover:bg-left">Book Appointment</button>
+     </div>
+
+   </section>
 
         </div>
     );
