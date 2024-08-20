@@ -9,10 +9,21 @@ import img5 from '../../../public/Screenshot 2024-08-19 223441.png'
 import img6 from '../../../public/Screenshot 2024-08-19 223454.png'
 import img7 from '../../../public/Screenshot 2024-08-19 223503.png'
 import img8 from '../../../public/Screenshot 2024-08-19 223518.png'
+import img9 from '../../../public/Screenshot 2024-08-19 223532.png'
+import img10 from '../../../public/Screenshot 2024-08-19 223540.png'
+import img11 from '../../../public/Screenshot 2024-08-19 223549.png'
+import img12 from '../../../public/Screenshot 2024-08-19 223606.png'
+import img13 from '../../../public/Screenshot 2024-08-19 190600.png'
+
+
+
 
 const About = () => {
     return (
         <div>
+
+     {/* section 1 */}
+
            <section className="my-20">
 
             <div className="w-[80%] mx-auto flex flex-col lg:flex-row">
@@ -40,7 +51,7 @@ const About = () => {
 
             </section> 
 
-
+         {/* section 2 */}
 
             <section>
 
@@ -72,6 +83,9 @@ const About = () => {
 </div>     
 
    </section>
+
+      {/* section 3 */}
+
 
    <section className=" bg-[#fff7f3] pb-20">
      <div className="w-[80%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -133,6 +147,10 @@ const About = () => {
 
    </section>
 
+
+    {/* section 4 */}
+
+
    <section className="bg-[#07332f] w-full ">
 
      <div className="flex flex-col gap-10 justify-evenly items-center lg:flex-row py-14">
@@ -148,6 +166,98 @@ const About = () => {
      </div>
 
    </section>
+
+
+   {/* section 5 */}
+
+   <section className="bg-[#fceee7] pt-10 pb-20">
+
+       <div className="flex flex-col gap-10 justify-evenly items-center lg:flex-row py-14 w-full lg:w-[80%] mx-auto">
+       <div className="w-full lg:w-1/2 flex flex-col justify-center items-center lg:items-start lg:justify-start gap-3  font-semibold text-black text-5xl py-10">
+                <p className='uppercase tracking-widest text-xl text-[#f29269] font-medium'>how we work</p>
+                      <h1>A Comprehensive</h1>
+                      <h1>Directory For Your</h1>
+                      <h1>Health Care.</h1>
+                   </div>
+
+                   <div className="w-full lg:w-1/2 p-10">
+                     <p className="text-slate-500">we are your trusted one-stop destination for all your healthcare needs. Our comprehensive directory is designed to provide you with easy access to a wide range of healthcare services and providers, ensuring that you and your family.</p>
+                   </div>
+       </div>
+
+       <div className="w-[90%] md:w-[80%] mx-auto grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-5">
+
+       <div className="flex flex-col justify-center items-center gap-5 text-black">
+            <Image src={img9} alt="o"></Image>
+            <h1 className="text-base font-semibold md:text-xl mb-5">Book An Appointment</h1>
+        </div>
+
+        <div className="flex flex-col justify-center items-center gap-5 text-black">
+            <Image src={img10} alt="o"></Image>
+            <h1 className="text-base font-semibold md:text-xl mb-5">Conduct Checkup</h1>
+        </div>
+
+        <div className="flex flex-col justify-center items-center gap-5 text-black">
+            <Image src={img11} alt="o"></Image>
+            <h1 className="text-base font-semibold md:text-xl mb-5">Perform Treatment</h1>
+        </div>
+
+        <div className="flex flex-col justify-center items-center gap-5 text-black">
+            <Image src={img12} alt="o"></Image>
+            <h1 className="text-base font-semibold md:text-xl mb-5">Prescribe & Payment</h1>
+        </div>
+       </div>
+
+   </section>
+
+      {/* section 6 */}
+
+      <section>
+
+<div className="hero bg-[#fef9f6] pb-20 lg:pb-0 min-h-screen">
+<div className="hero-content flex-col-reverse lg:flex-row px-3 gap-20 lg:gap-10">
+<Image src={img13} alt='banner' className="w-[90%] mx-auto md:max-w-xl"></Image>
+{/* <img
+src={banner}
+className="max-w-sm rounded-lg shadow-2xl" /> */}
+<div className='px-10 md:px-5'>
+<p className='uppercase tracking-widest text-xl text-[#f29269] font-medium'>faqs</p>
+<h1 className="text-5xl font-bold  mt-3">Consultations with</h1>
+<h1 className="text-5xl font-bold  my-2">Qualified doctors.</h1>
+
+
+<div className=" my-5 space-y-1">
+<div className="collapse collapse-plus bg-transparent">
+<input type="radio" className="text-xl" name="my-accordion-3"  />
+  <div className="collapse-title text-xl font-semibold">Are telemedicine consultations available?</div>
+  <div className="collapse-content">
+    <p className="text-slate-400">Yes, we offer telemedicine consultations for certain medical conditions.</p>
+  </div>
+  
+</div>
+<div className="collapse collapse-plus bg-transparent">
+  <input type="radio" name="my-accordion-3" />
+  <div className="collapse-title text-xl font-semibold">Do you accept health insurance?</div>
+  <div className="collapse-content">
+    <p className="text-slate-400">Yes, we accept most major health insurance plans.</p>
+  </div>
+</div>
+<div className="collapse collapse-plus bg-transparent">
+  <input type="radio" name="my-accordion-3" />
+  <div className="collapse-title text-xl font-semibold">How much does a consultation cost?</div>
+  <div className="collapse-content">
+    <p className="text-slate-400">Consultation fees vary depending on the doctor and the type of consultation.</p>
+  </div>
+</div>
+</div>
+
+</div>
+</div>
+</div>     
+
+</section>
+
+
 
         </div>
     );

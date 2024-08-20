@@ -3,8 +3,8 @@ import logo from '../../../public/Screenshot 2024-08-19 162502.png'
 
 const Navbar = () => {
     return (
-        <div className="bg-[#07332f] w-full border-b-[1px] border-b-[#ffffff41] h-auto md:h-20 lg:h-auto">
-            <div className="navbar bg-transparent w-[90%] mx-auto items-center flex py-3">
+        <div className="bg-[#07332f] w-full border-b-[1px] border-b-[#ffffff41] h-auto md:h-20 lg:h-auto fixed z-50">
+            <div className="navbar bg-transparent w-[98%] md:w-[90%] mx-auto items-center flex py-3">
   <div className="flex-1">
     <a className="btn btn-ghost text-xl"><Image src={logo} alt="logo" className="md:h-16 md:w-44 w-32 h-12"></Image></a>
   </div>
