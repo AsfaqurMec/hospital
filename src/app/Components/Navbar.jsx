@@ -21,7 +21,14 @@ const Navbar = () => {
     {/* menubar */}
 <div className="flex lg:hidden ">
 
-    <label className="btn p-2 bg-[#f89970] text-white hover:bg-[#f1804f] border-none swap swap-rotate">
+
+<div className="drawer drawer-end">
+  <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
+  <div className="drawer-content">
+    {/* Page content here */}
+    {/* <label htmlFor="my-drawer-4" className="drawer-button btn btn-primary">Open drawer</label> */}
+
+    <label htmlFor="my-drawer-4" className="btn drawer-button p-2 bg-[#f89970] text-white hover:bg-[#f1804f] border-none swap swap-rotate">
   {/* this hidden checkbox controls the state */}
   <input type="checkbox" />
 
@@ -46,6 +53,26 @@ const Navbar = () => {
       points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49" />
   </svg>
 </label>
+
+
+
+  </div>
+  <div className="drawer-side">
+    <label htmlFor="my-drawer-4" aria-label="close sidebar" className="drawer-overlay"></label>
+    <ul className="menu bg-[#07332f] text-white min-h-full w-80 p-4">
+      {/* Sidebar content here */}
+      <li ><label htmlFor="my-drawer-4" aria-label="close sidebar" className="drawer-overlay  py-1 pl-[11px] w-9  rounded-full bg-[#f89970] text-xl">X</label></li>
+      <li className="font-light text-lg text-white mt-6"><a>Home</a></li>
+      <li className="font-light text-lg text-white"><a>About Us</a></li>
+      <li className="font-light text-lg text-white"><a>Services</a></li>
+      <li className="font-light text-lg text-white"><a>Shop</a></li>
+      <li className="font-light text-lg text-white mr-2 mb-3"><a>Contact Us</a></li>
+      <button className="btn bg-transparent font-semibold text-xl rounded-3xl border-2 text-[#f7a582] btn-outline hover:bg-left">Book Appointment</button>
+    </ul>
+  </div>
+</div>
+
+    
 </div>
 
   </div>

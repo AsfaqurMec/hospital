@@ -14,9 +14,10 @@ import img10 from '../../../public/Screenshot 2024-08-19 223540.png'
 import img11 from '../../../public/Screenshot 2024-08-19 223549.png'
 import img12 from '../../../public/Screenshot 2024-08-19 223606.png'
 import img13 from '../../../public/Screenshot 2024-08-19 190600.png'
-
-
-
+import img14 from '../../../public/Screenshot 2024-08-19 190628.png'
+import img15 from '../../../public/Screenshot 2024-08-19 190654.png'
+import img16 from '../../../public/Screenshot 2024-08-19 190713.png'
+import Parallex from "./Parallex";
 
 const About = () => {
     return (
@@ -257,7 +258,68 @@ className="max-w-sm rounded-lg shadow-2xl" /> */}
 
 </section>
 
+   {/* testimonial */}
+   <section className="bg-[#07332f] w-full relative">
 
+<div className="w-[90%] md:w-[80%] mx-auto py-20 text-white">
+<p className='uppercase tracking-widest text-xl text-[#f29269] font-medium'>testimonial</p>
+           <h1 className="text-4xl mb-5">What Patients Say About Us.</h1>
+           
+       
+
+</div>
+
+
+</section>
+
+
+    {/* blog section */}
+
+    <section className="bg-[#f6efec] h-auto pt-10">
+
+    <div className="w-[90%] md:w-[80%] mx-auto pt-20 ">
+           <p className='uppercase tracking-widest text-xl mb-2 text-[#f29269] font-medium'>our blog</p>
+           <h1 className="text-4xl font-semibold mb-5">Lates News & Articles.</h1>
+    </div>
+
+   <div className="w-[100%] md:w-[90%] mx-auto py-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center gap-5">
+       
+  
+                <div className=" flex flex-col justify-center gap-3   text-black text-2xl font-normal p-10">
+                <Image src={img14} className="rounded-md" alt="logo"></Image>
+                      <h1>Best Medical Network Directory For Physicians & Clients</h1>
+                      <p className="text-base text-slate-400">Hypertension, commonly known as high blood pressure, is a prevalent</p>
+                      <button className="text-lg rounded-none bg-[#f7a58200] border-none text-[#ef885b] text-left">Read More</button>
+                   </div>
+                   
+                
+
+                
+                <div className=" flex flex-col justify-center gap-3   text-black text-2xl font-normal p-10">
+                <Image src={img15} className="rounded-md" alt="logo"></Image>
+                      <h1>The Importance of Regular Health Checkups</h1>
+                      <p className="text-base text-slate-400">This symptoms, causes, risk factors, diagnosis, treatment options strategies.</p>
+                      <button className="text-lg rounded-none bg-[#f7a58200] border-none text-[#ef885b] text-left">Read More</button>
+                   </div>
+                   
+              
+
+                
+                <div className=" flex flex-col justify-center gap-3   text-black text-2xl font-normal p-10">
+                <Image src={img16} className="rounded-md" alt="logo"></Image>
+                      <h1>Managing Better Stress for Better Mental Health</h1>
+                      <p className="text-base text-slate-400">These stories can provide valuable insights into living with a particular condition</p>
+                      <button className="text-lg rounded-none bg-[#f7a58200] border-none text-[#ef885b] text-left">Read More</button>
+                   </div>
+                   
+                
+   </div>
+
+    </section>
+
+{/* parallax section */}
+
+    <Parallex></Parallex>
 
         </div>
     );
