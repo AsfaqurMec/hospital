@@ -33,7 +33,7 @@ const page = () => {
             isLoading ? <Spinner></Spinner>
 
             :
-            <div className='pt-20 lg:pt-24'>
+            <div className='pt-20 '>
                 <div className='bg-[#07332f] text-center py-20  text-white'>
             <h1 className='text-5xl font-semibold text-[#f29269] mb-3'>About Us</h1>
             <h1 className='flex justify-center text-lg items-center gap-2'> Home / About Us</h1>
