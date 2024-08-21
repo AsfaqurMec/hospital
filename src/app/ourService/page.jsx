@@ -18,7 +18,9 @@ import img14 from '../../../public/Screenshot 2024-08-21 192509.png'
 import img15 from '../../../public/Screenshot 2024-08-21 192517.png'
 import img16 from '../../../public/Screenshot 2024-08-21 192525.png'
 import img17 from '../../../public/Screenshot 2024-08-21 192534.png'
-
+// import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+import AOS from 'aos';
 
 
 
@@ -26,7 +28,7 @@ import img17 from '../../../public/Screenshot 2024-08-21 192534.png'
 
 
 const page = () => {
-
+   AOS.init({});
     const [isLoading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -46,20 +48,20 @@ const page = () => {
 
             :
             <div className='pt-20 '>
-               <div className='bg-[#07332f] text-center py-20  text-white'>
+               <div className='bg-[#07332f] text-center py-28  text-white'>
             <h1 className='text-5xl font-semibold text-[#f29269] mb-3'>Services</h1>
             <h1 className='flex justify-center text-lg items-center gap-2'> Home / Services</h1>
 
          </div>
 
           <div className='py-20 bg-[#fef8f3] w-full'>
-          <p className='uppercase tracking-widest text-xl mb-2 text-[#f29269] font-medium text-center'>our services</p>
-          <h1 className='text-4xl font-semibold text-center mb-3'>Providing Medical Care For TheSickest</h1>
-          <h1 className='flex justify-center font-semibold text-4xl items-center gap-2 mb-10'>In Our Community.</h1>
+          <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" className='mt-10 uppercase tracking-widest text-xl mb-2 text-[#f29269] font-medium text-center'>our services</p>
+          <h1 data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100" className='text-4xl font-semibold text-center mb-3'>Providing Medical Care For TheSickest</h1>
+          <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" className='mb-28 flex justify-center font-semibold text-4xl items-center gap-2 '>In Our Community.</h1>
 
            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 w-[95%] md:w-[85%] mx-auto'>
 
-           <div className="bg-[#07332f] text-white w-full border-[1px] border-black flex flex-col justify-center gap-3 p-10">
+           <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" className="bg-[#07332f] text-white w-full border-[1px] border-black flex flex-col justify-center gap-3 p-10">
                 
                 <Image src={img8} alt="logo"></Image>
                       <h1 className='text-2xl font-semibold'>cardiology clinic</h1>
@@ -74,7 +76,7 @@ const page = () => {
                       </div>
                 </div>
 
-                <div className="bg-[#07332f] text-white w-full border-[1px] border-black flex flex-col justify-center gap-3 p-10">
+                <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" className="bg-[#07332f] text-white w-full border-[1px] border-black flex flex-col justify-center gap-3 p-10">
                 
                 <Image src={img9} alt="logo"></Image>
                       <h1 className='text-2xl font-semibold'>pathology clinic</h1>
@@ -89,7 +91,7 @@ const page = () => {
                       </div>
                 </div>
 
-                <div className="bg-[#07332f] text-white w-full border-[1px] border-black flex flex-col justify-center gap-3 p-10">
+                <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" className="bg-[#07332f] text-white w-full border-[1px] border-black flex flex-col justify-center gap-3 p-10">
                 
                 <Image src={img10} alt="logo"></Image>
                       <h1 className='text-2xl font-semibold'>laboratory analysis</h1>
@@ -104,7 +106,7 @@ const page = () => {
                       </div>
                 </div>
 
-                <div className="bg-[#07332f] text-white w-full border-[1px] border-black flex flex-col justify-center gap-3 p-10">
+                <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" className="bg-[#07332f] text-white w-full border-[1px] border-black flex flex-col justify-center gap-3 p-10">
                 
                 <Image src={img11} alt="logo"></Image>
                       <h1 className='text-2xl font-semibold'>pediatric clinic</h1>
@@ -119,7 +121,7 @@ const page = () => {
                       </div>
                 </div>
 
-                <div className="bg-[#07332f] text-white w-full border-[1px] border-black flex flex-col justify-center gap-3 p-10">
+                <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" className="bg-[#07332f] text-white w-full border-[1px] border-black flex flex-col justify-center gap-3 p-10">
                 
                 <Image src={img12} alt="logo"></Image>
                       <h1 className='text-2xl font-semibold'>cardiac clinic</h1>
@@ -134,7 +136,7 @@ const page = () => {
                       </div>
                 </div>
 
-                <div className="bg-[#07332f] text-white w-full border-[1px] border-black flex flex-col justify-center gap-3 p-10">
+                <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" className="bg-[#07332f] text-white w-full border-[1px] border-black flex flex-col justify-center gap-3 p-10">
                 
                 <Image src={img13} alt="logo"></Image>
                       <h1 className='text-2xl font-semibold'>neurology clinic</h1>
@@ -157,35 +159,35 @@ const page = () => {
 
 <div className="flex flex-col gap-10 justify-evenly items-center lg:flex-row py-14 w-full lg:w-[80%] mx-auto">
 <div className="w-full lg:w-1/2 flex flex-col justify-center items-center lg:items-start lg:justify-start gap-3  font-semibold text-black text-5xl py-10">
-         <p className='uppercase tracking-widest text-xl text-[#f29269] font-medium'>top service</p>
-               <h1>We Are a Pogressive </h1>
-               <h1>Medical Clinic.</h1>
+         <p data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100" className='uppercase tracking-widest text-xl text-[#f29269] font-medium'>top service</p>
+               <h1 data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100">We Are a Pogressive </h1>
+               <h1 data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100">Medical Clinic.</h1>
                
             </div>
 
             <div className="w-full lg:w-1/2 p-10">
-              <p className="text-slate-500">Welcome to our comprehensive medical services designed to cater to your diverse healthcare needs. We are committed to delivering top-notch medical care with a patient-centered approach.</p>
+              <p data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="100" className="text-slate-500">Welcome to our comprehensive medical services designed to cater to your diverse healthcare needs. We are committed to delivering top-notch medical care with a patient-centered approach.</p>
             </div>
 </div>
 
 <div className="w-[90%] md:w-[80%] mx-auto grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-5">
 
-<div className="flex flex-col justify-center items-center gap-5 text-black border-[1px] border-black py-7">
+<div data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="100" className="flex flex-col justify-center items-center gap-5 text-black border-[1px] border-black py-7">
      <Image src={img14} alt="o"></Image>
      <h1 className="text-base font-semibold md:text-xl mb-5">Cardiology</h1>
  </div>
 
- <div className="flex flex-col justify-center items-center gap-5 text-black border-[1px] border-black py-7">
+ <div data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="200" className="flex flex-col justify-center items-center gap-5 text-black border-[1px] border-black py-7">
      <Image src={img15} alt="o"></Image>
      <h1 className="text-base font-semibold md:text-xl mb-5">Diagnostics</h1>
  </div>
 
- <div className="flex flex-col justify-center items-center gap-5 text-black border-[1px] border-black py-7">
+ <div data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="300" className="flex flex-col justify-center items-center gap-5 text-black border-[1px] border-black py-7">
      <Image src={img16} alt="o"></Image>
      <h1 className="text-base font-semibold md:text-xl mb-5">Virology</h1>
  </div>
 
- <div className="flex flex-col justify-center items-center gap-5 text-black border-[1px] border-black py-7">
+ <div data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="400" className="flex flex-col justify-center items-center gap-5 text-black border-[1px] border-black py-7">
      <Image src={img17} alt="o"></Image>
      <h1 className="text-base font-semibold md:text-xl mb-5">Therapy</h1>
  </div>
@@ -202,14 +204,14 @@ const page = () => {
          <section className="bg-[#fef8f3] h-auto pt-0 pb-14">
 
 <div className="w-[90%] md:w-[80%] mx-auto pt-2 ">
-       <p className='uppercase tracking-widest text-xl mb-2 text-[#f29269] font-medium'>Our Best Doctor</p>
-       <h1 className="text-4xl font-semibold mb-5">Meet Our Doctors.</h1>
+       <p data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100" className='uppercase tracking-widest text-xl mb-2 text-[#f29269] font-medium'>Our Best Doctor</p>
+       <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" className="text-4xl font-semibold mb-5">Meet Our Doctors.</h1>
 </div>
 
 <div className="w-[100%] md:w-[90%] mx-auto py-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center gap-5">
    
 
-            <div className=" flex flex-col justify-center gap-3   text-black text-2xl font-normal p-10">
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" className=" flex flex-col justify-center gap-3   text-black text-2xl font-normal p-10">
             <Image src={img4} className="rounded-md" alt="logo"></Image>
             <button className="text-lg rounded-none bg-[#f7a58200] border-none text-[#ef885b] text-left">family physician</button>
                   <h1>dr. elizabeth foster</h1>
@@ -219,7 +221,7 @@ const page = () => {
             
 
             
-            <div className=" flex flex-col justify-center gap-3   text-black text-2xl font-normal p-10">
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" className=" flex flex-col justify-center gap-3   text-black text-2xl font-normal p-10">
             <Image src={img5} className="rounded-md" alt="logo"></Image>
             <button className="text-lg rounded-none bg-[#f7a58200] border-none text-[#ef885b] text-left">surgeon</button>
                   <h1>dr. david lee</h1>
@@ -229,14 +231,14 @@ const page = () => {
           
 
             
-            <div className=" flex flex-col justify-center gap-3   text-black text-2xl font-normal p-10">
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" className=" flex flex-col justify-center gap-3   text-black text-2xl font-normal p-10">
             <Image src={img6} className="rounded-md" alt="logo"></Image>
             <button className="text-lg rounded-none bg-[#f7a58200] border-none text-[#ef885b] text-left">cardiologist</button>
                   <h1>dr. ava white</h1>
                   <p className="text-base text-slate-400">Mental wellness and guiding..</p>
                </div>
                
-               <div className=" flex flex-col justify-center gap-3   text-black text-2xl font-normal p-10">
+               <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" className=" flex flex-col justify-center gap-3   text-black text-2xl font-normal p-10">
             <Image src={img7} className="rounded-md" alt="logo"></Image>
             <button className="text-lg rounded-none bg-[#f7a58200] border-none text-[#ef885b] text-left">dermatologist</button>
                   <h1>Dr. Daniel Brown</h1>

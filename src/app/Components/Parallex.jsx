@@ -42,8 +42,8 @@ backgroundAttachment: "fixed", // Smooth out the movement
         }}
       ></div >
 
-      <div className="relative z-10 w-full h-full">
-        <div className="flex flex-col items-center justify-end w-full h-full">
+      <div className="relative z-10 w-full h-full pb-10">
+        <div className="flex flex-col items-center justify-end w-full h-full ">
       <h1 className='uppercase tracking-widest text-xl mb-3 text-[#ffffff] font-medium'>fill the form</h1>
       <h1 className="mb-5 text-5xl font-semibold text-[#ffffff]">Contact Form.</h1>
 
@@ -113,7 +113,7 @@ backgroundAttachment: "fixed", // Smooth out the movement
              <div>
                
                {/* lg */}
- <textarea placeholder="your massage" className="textarea border-[#e2b29d] rounded-md border-2 focus:outline-none bg-transparent textarea-lg w-full " ></textarea>
+ <textarea placeholder="your massage" className="resize-none h-[106px] textarea border-[#e2b29d] rounded-md border-2 focus:outline-[#e2b29d] bg-transparent textarea-lg w-full " ></textarea>
              </div>
  <div className='w-full flex justify-start'><button className='btn border-[#e2b29d] rounded-3xl border-2 focus:outline-none bg-transparent text-white  hover:bg-none  hover:text-red-700 px-5 font-medium  text-2xl uppercase'>SEND</button></div>
              </div> 

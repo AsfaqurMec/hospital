@@ -13,12 +13,12 @@ const Navbar = () => {
     <a className="btn btn-ghost text-xl"><Image src={logo} alt="logo" className="lg::h-16 lg::w-44 md:h-14 md:w-40 w-32 h-12"></Image></a>
   </div>
   <div className="flex-none mt-3">
-    <ul className=" gap-4 items-center menu-horizontal  px-1 hidden lg:flex">
-      <li className="font-light text-lg bg-transparent text-white"><Link className={`link bg-transparent ${pathname === '/' ? 'active' : 'no-underline'}`} href={'/'}>Home</Link></li>
-      <li className="font-light text-lg text-white"><Link className={`link ${pathname === '/about' ? 'active' : 'no-underline'}`} href={'/about'}>About Us</Link></li>
-      <li className="font-light text-lg text-white"><Link className={`link ${pathname === '/ourService' ? 'active' : 'no-underline'}`} href={'/ourService'}>Services</Link></li>
-      <li className="font-light text-lg text-white"><Link className={`link ${pathname === '/shop' ? 'active' : 'no-underline'}`} href={'/'}>Shop</Link></li>
-      <li className="font-light text-lg text-white mr-2"><Link className={`link ${pathname === '/contact' ? 'active' : 'no-underline'}`} href={'/contact'}>Contact Us</Link></li>
+    <ul className=" gap-6 items-center menu-horizontal  px-1 hidden lg:flex">
+      <li className="font-light text-xl bg-transparent text-white"><Link className={`link bg-transparent ${pathname === '/' ? 'active' : 'no-underline'}`} href={'/'}>Home</Link></li>
+      <li className="font-light text-xl text-white"><Link className={`link ${pathname === '/about' ? 'active' : 'no-underline'}`} href={'/about'}>About Us</Link></li>
+      <li className="font-light text-xl text-white"><Link className={`link ${pathname === '/ourService' ? 'active' : 'no-underline'}`} href={'/ourService'}>Services</Link></li>
+      <li className="font-light text-xl text-white"><Link className={`link ${pathname === '/shop' ? 'active' : 'no-underline'}`} href={'/'}>Shop</Link></li>
+      <li className="font-light text-xl text-white mr-2"><Link className={`link ${pathname === '/contact' ? 'active' : 'no-underline'}`} href={'/contact'}>Contact Us</Link></li>
       <Link className={`link ${pathname === '/appointment' ? 'active' : 'no-underline'}`} href={'/appointment'}> <button className="relative btn bg-transparent font-semibold text-xl rounded-3xl border-2 text-[#f7a582] border-[#f7a582] hover:border-[#f7a582] group overflow-hidden">
       <span className="absolute inset-0 w-full h-full transition-transform transform scale-x-0 bg-[#fffffff3] group-hover:scale-x-100 origin-center duration-500 ease-out"></span>
         <span className="relative z-50 text-[#f7a582]">Book Appointment</span>

@@ -34,9 +34,9 @@ const Footer = () => {
   </nav>
   <nav className='space-y-3'>
     <h6 className="footer-title text-xl mb-3 text-[#eb966e] opacity-100">Contact Details</h6>
-    <a className="link link-hover text-base font-semibold">Jl. Raya Kuta No.70, Kuta</a>
+    <a className="link link-hover text-base font-semibold">Dhanmondi Road No.7, Dhaka</a>
     <a className="link link-hover text-base font-semibold">Healthcare@gmail.com</a>
-    <a className="link link-hover text-base font-semibold">+01 547 547 5478</a>
+    <a className="link link-hover text-base font-semibold">+01956230265</a>
     <a className="link link-hover text-base font-semibold">8 AM - 5 PM , Monday - Saturday</a>
   </nav>
   
@@ -60,7 +60,7 @@ const Footer = () => {
 </footer> 
 <footer className="footer footer-center text-white p-4">
   <aside>
-    <p className='text-xl mb-7'>Copyright © {new Date().getFullYear()} - All right reserved by ACME Industries Ltd</p>
+    <p className='text-xl mb-7'>Copyright © {new Date().getFullYear()} - All right reserved by <strong className='text-[#eb966e]'>MediPro</strong> Ltd</p>
   </aside>
 </footer>
         </div>
