@@ -6,7 +6,7 @@ const Navbar = () => {
         <div className="bg-[#07332f] w-full border-b-[1px] border-b-[#ffffff41] h-auto md:h-20 lg:h-auto fixed z-50">
             <div className="navbar bg-transparent w-[98%] md:w-[90%] mx-auto items-center flex py-3">
   <div className="flex-1">
-    <a className="btn btn-ghost text-xl"><Image src={logo} alt="logo" className="md:h-16 md:w-44 w-32 h-12"></Image></a>
+    <a className="btn btn-ghost text-xl"><Image src={logo} alt="logo" className="lg::h-16 lg::w-44 md:h-14 md:w-40 w-32 h-12"></Image></a>
   </div>
   <div className="flex-none mt-3">
     <ul className="menu menu-horizontal px-1 hidden lg:flex">
@@ -15,7 +15,10 @@ const Navbar = () => {
       <li className="font-light text-lg text-white"><a>Services</a></li>
       <li className="font-light text-lg text-white"><a>Shop</a></li>
       <li className="font-light text-lg text-white mr-2"><a>Contact Us</a></li>
-      <button className="btn bg-transparent font-semibold text-xl rounded-3xl border-2 text-[#f7a582] btn-outline hover:bg-left">Book Appointment</button>
+      <button className="relative btn bg-transparent font-semibold text-xl rounded-3xl border-2 text-[#f7a582] border-[#f7a582] hover:border-[#f7a582] group overflow-hidden">
+      <span className="absolute inset-0 w-full h-full transition-transform transform scale-x-0 bg-[#fffffff3] group-hover:scale-x-100 origin-center duration-500 ease-out"></span>
+        <span className="relative z-50 text-[#f7a582]">Book Appointment</span>
+        </button>
     </ul>
 
     {/* menubar */}

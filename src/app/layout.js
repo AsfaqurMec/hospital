@@ -1,7 +1,10 @@
+
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
+
+import Spinner from "./Components/Spinner";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,12 +14,38 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+
+        // let isLoad = true;
+
+    
+       
+        //      setTimeout( () => {
+        //         isLoad = false;
+        //         console.log(isLoad);
+                
+        //      }, 100);
+        
+        //    // setTimeout();
+        //      console.log(isLoad);
+
+   
+
+
   return (
     <html lang="en" data-theme="light">
       <body className={inter.className}>
-        <Navbar></Navbar>
-        {children}
-        <Footer></Footer>
+         {/* {
+            isLoad ? <Spinner></Spinner> 
+
+            : */}
+            <div>
+            <Navbar></Navbar>
+            {children}
+            <Footer></Footer>
+             </div>
+         {/* } */}
+        
+
         </body>
     </html>
   );

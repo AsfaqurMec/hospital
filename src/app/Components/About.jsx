@@ -18,6 +18,7 @@ import img14 from '../../../public/Screenshot 2024-08-19 190628.png'
 import img15 from '../../../public/Screenshot 2024-08-19 190654.png'
 import img16 from '../../../public/Screenshot 2024-08-19 190713.png'
 import Parallex from "./Parallex";
+import Spinner from "./Spinner";
 
 const About = () => {
     return (
@@ -320,7 +321,9 @@ className="max-w-sm rounded-lg shadow-2xl" /> */}
 {/* parallax section */}
 
     <Parallex></Parallex>
-
+    {/* <div className="h-40 w-full bg-[#1e4036] pt-5">
+    <Spinner></Spinner>
+    </div> */}
         </div>
     );
 };
