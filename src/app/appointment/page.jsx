@@ -3,18 +3,19 @@
 import React, { useEffect, useState } from 'react';
 import Image from "next/image";
 // import AOS from 'aos';
-import 'aos/dist/aos.css'; // You can also use <link> for styles
-import AOS from 'aos';
+
 import img from '../../../public/Screenshot 2024-08-19 022706.png'
 import img14 from '../../../public/Screenshot 2024-08-19 190850.png'
 import img15 from '../../../public/Screenshot 2024-08-19 190902.png'
 import img16 from '../../../public/Screenshot 2024-08-19 190914.png'
 import img17 from '../../../public/Screenshot 2024-08-19 190930.png'
 import Spinner from '../Components/Spinner';
+import { useSession } from 'next-auth/react';
+
 
 const page = () => {
-  AOS.init({});
-    const [isLoading, setLoading] = useState(true);
+
+  const [isLoading, setLoading] = useState(true);
 
     useEffect(() => {
         const load = () => {
@@ -24,6 +25,33 @@ const page = () => {
         }
        load(); 
     }, []);
+
+  const session = useSession();
+   // console.log(session.data.user);
+   const handleSubmit = async (event) => {
+    event.preventDefault();
+    const newAppointment = {
+      name: event.target.name.value,
+      email: event.target.email.value,
+      number: event.target.number.value,
+      date: event.target.date.value,
+      time: event.target.time.value,
+      doctor: event.target.doctor.value,
+      message: event.target.message.value,
+    };
+    const resp = await fetch("http://localhost:3000/appointment/api", {
+      method: "POST",
+      body: JSON.stringify(newAppointment),
+      headers: {
+        "content-type": "application/json",
+      },
+    });
+    if (resp.status === 200) {
+      event.target.reset();
+    }
+  };
+
+
 
     return (
         <>
@@ -42,7 +70,7 @@ const page = () => {
         <div data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100" className="flex w-full flex-col md:flex-row lg:w-[80%] mx-auto">
             
              <div className="w-full lg:w-[60%] h-full">
-             <form  
+             <form  onSubmit={handleSubmit} action=""
                className='w-full space-y-6 bg-[#07332f] px-8 py-12'
            >
              <div className='w-full space-y-4'>
@@ -54,8 +82,9 @@ const page = () => {
                  name='name'
                  id='name'
                  placeholder='Name'
-                 className='w-full px-3 py-2 border-[#e2b29d] rounded-md border-2 focus:outline-none bg-transparent text-gray-900'
+                 className='w-full px-3 py-2 border-[#e2b29d] rounded-md border-2 focus:outline-none bg-transparent text-gray-400'
                  data-temp-mail-org='0'
+                 defaultValue={session?.data?.user?.name}
                />
              </div>
              <div className='w-full md:w-1/2'>
@@ -66,8 +95,9 @@ const page = () => {
                  id='email'
                  required
                  placeholder='Email'
-                 className='w-full px-3 py-2 border-[#e2b29d] rounded-md border-2 focus:outline-none bg-transparent text-gray-900'
+                 className='w-full px-3 py-2 border-[#e2b29d] rounded-md border-2 focus:outline-none bg-transparent text-gray-400'
                  data-temp-mail-org='0'
+                 defaultValue={session?.data?.user?.email}
                />
              </div>
  
@@ -78,8 +108,8 @@ const page = () => {
                
                <input
                  type='text'
-                 name='name'
-                 id='name'
+                 name='number'
+                 id='number'
                  placeholder='Your Number'
                  className='w-full px-3 py-2 border-[#e2b29d] rounded-md border-2 focus:outline-none bg-transparent text-gray-400'
                  data-temp-mail-org='0'
@@ -89,8 +119,8 @@ const page = () => {
                
                <input
                  type='date'
-                 name='email'
-                 id='email'
+                 name='date'
+                 id='date'
                  required
                  placeholder=''
                  className='w-64 px-3 py-2 border-[#e6d1c8] rounded-md border-2 focus:outline-none bg-transparent text-gray-400'
@@ -100,16 +130,45 @@ const page = () => {
  
              </div>
  
+             <div className="flex flex-col md:flex-row gap-5 w-full"> 
+             <div className='w-full md:w-1/2'>
+               
+               <input
+                 type='time'
+                 name='time'
+                 id='time'
+                 placeholder='Appointment time'
+                 className='w-full px-3 py-2 border-[#e2b29d] rounded-md border-2 focus:outline-none bg-transparent text-gray-400'
+                 data-temp-mail-org='0'
+               />
+             </div>
+             <div className='w-full md:w-1/2'>
+               
+             <select id='doctor' className="py-3 w-full outline-transparent px-3  border-[#e2b29d] rounded-md border-2 focus:outline-none bg-transparent text-gray-400">
+  <option disabled selected>Select Doctor</option>
+  <option value='Dr. Elizabeth foster'>Dr. Elizabeth foster</option>
+  <option value='Dr. David lee'>Dr. David lee</option>
+  <option value='Dr. Ava white'>Dr. Ava white</option>
+  <option value='Dr. Daniel Brown'>Dr. Daniel Brown</option>
+
+
+</select>
+             </div>
+ 
+             </div>
+ 
+
+
              <div>
                
                {/* lg */}
- <textarea placeholder="your massage" className="resize-none h-28 textarea border-[#e2b29d] rounded-md border-2 focus:outline-[#e2b29d] bg-transparent textarea-lg w-full " ></textarea>
+ <textarea id='message' placeholder="your massage" className="resize-none h-28 textarea border-[#e2b29d] rounded-md border-2 text-gray-400 focus:outline-[#e2b29d] bg-transparent textarea-lg w-full " ></textarea>
              </div>
  <div className='w-full flex justify-start'><button className='btn border-[#e2b29d] rounded-3xl border-2 focus:outline-none bg-transparent text-white  hover:bg-none  hover:text-red-700 px-5 font-medium  text-2xl uppercase'>SEND</button></div>
              </div> 
            </form>
              </div>
-             <Image src={img} alt="" className="h-[400px] "></Image>
+             <Image src={img} alt="" className="h-[465px] w-full lg:w-[40%]"></Image>
          </div>
         </div>
 
@@ -121,7 +180,7 @@ const page = () => {
        <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" className="text-4xl font-semibold mb-5">Meet Our Doctors.</h1>
 </div>
 
-<div className="w-[100%] md:w-[90%] mx-auto py-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center gap-5">
+<div className="w-[100%] md:w-[90%] mx-auto py-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-center gap-5">
    
 
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" className=" flex flex-col justify-center gap-3   text-black text-2xl font-normal p-10">

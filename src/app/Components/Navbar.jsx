@@ -17,8 +17,8 @@ const Navbar = () => {
       <li className="font-light text-xl bg-transparent text-white"><Link className={`link bg-transparent ${pathname === '/' ? 'active' : 'no-underline'}`} href={'/'}>Home</Link></li>
       <li className="font-light text-xl text-white"><Link className={`link ${pathname === '/about' ? 'active' : 'no-underline'}`} href={'/about'}>About Us</Link></li>
       <li className="font-light text-xl text-white"><Link className={`link ${pathname === '/ourService' ? 'active' : 'no-underline'}`} href={'/ourService'}>Services</Link></li>
-      <li className="font-light text-xl text-white"><Link className={`link ${pathname === '/shop' ? 'active' : 'no-underline'}`} href={'/'}>Shop</Link></li>
       <li className="font-light text-xl text-white mr-2"><Link className={`link ${pathname === '/contact' ? 'active' : 'no-underline'}`} href={'/contact'}>Contact Us</Link></li>
+      <li className="font-light text-xl text-white mr-2"><Link className={`link ${pathname === '/account' ? 'active' : 'no-underline'}`} href={'/account'}>My Account</Link></li>
       <Link className={`link ${pathname === '/appointment' ? 'active' : 'no-underline'}`} href={'/appointment'}> <button className="relative btn bg-transparent font-semibold text-xl rounded-3xl border-2 text-[#f7a582] border-[#f7a582] hover:border-[#f7a582] group overflow-hidden">
       <span className="absolute inset-0 w-full h-full transition-transform transform scale-x-0 bg-[#fffffff3] group-hover:scale-x-100 origin-center duration-500 ease-out"></span>
         <span className="relative z-50 text-[#f7a582]">Book Appointment</span>
@@ -72,8 +72,8 @@ const Navbar = () => {
       <li className="font-light text-lg bg-transparent text-white"><Link className={`link bg-transparent ${pathname === '/' ? 'active' : 'no-underline'}`} href={'/'}>Home</Link></li>
       <li className="font-light text-lg text-white"><Link className={`link ${pathname === '/about' ? 'active' : 'no-underline'}`} href={'/about'}>About Us</Link></li>
       <li className="font-light text-lg text-white"><Link className={`link ${pathname === '/ourService' ? 'active' : 'no-underline'}`} href={'/ourService'}>Services</Link></li>
-      <li className="font-light text-lg text-white"><Link className={`link ${pathname === '/shop' ? 'active' : 'no-underline'}`} href={'/'}>Shop</Link></li>
-      <li className="font-light text-lg text-white mr-2"><Link className={`link ${pathname === '/contact' ? 'active' : 'no-underline'}`} href={'/contact'}>Contact Us</Link></li>
+      <li className="font-light text-xl text-white mr-2"><Link className={`link ${pathname === '/contact' ? 'active' : 'no-underline'}`} href={'/contact'}>Contact Us</Link></li>
+      <li className="font-light text-lg text-white mr-2"><Link className={`link ${pathname === '/account' ? 'active' : 'no-underline'}`} href={'/account'}>My Account</Link></li>
       <Link className={`link ${pathname === '/appointment' ? 'active' : 'no-underline'}`} href={'/appointment'}> <button className="relative btn bg-transparent font-semibold text-xl rounded-3xl border-2 text-[#f7a582] border-[#f7a582] hover:border-[#f7a582] group overflow-hidden">
       <span className="absolute inset-0 w-full h-full transition-transform transform scale-x-0 bg-[#fffffff3] group-hover:scale-x-100 origin-center duration-500 ease-out"></span>
         <span className="relative z-50 text-[#f7a582]">Book Appointment</span>

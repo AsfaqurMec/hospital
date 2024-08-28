@@ -1,10 +1,10 @@
 import Image from "next/image";
-import im from '../../../public/Screenshot 2024-08-21 023938.png'
+import im from '../../../public/Screenshot_2024-08-21_023938-removebg-preview.png'
 
 const Spinner = () => {
     return (
         <div
-        className={`w-full  flex items-center justify-center bg-[#1e4036] h-screen`}
+        className={`w-full  flex items-center justify-center bg-[#07332f] h-screen`}
         style={{
           borderColor: 'transparent',
           borderTopColor: 'currentColor',

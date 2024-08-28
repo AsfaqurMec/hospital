@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import img from '../../../public/Screenshot 2024-08-19 022706.png'
+import i from '../../../public/hospital_bed_vn_background_by_drechenaux_dg83a9z-pre.jpg'
 // import { useEffect, useState } from "react";
 
 
@@ -26,13 +27,14 @@ const Parallex = () => {
 //       }
 //     };
 //   }, []);
+//https://i.ibb.co/DKvdpvv/hospital-bed-vn-background-by-drechenaux-dg83a9z-pre.jpg
 
     return (
         <div className="relative h-screen overflow-hidden">
       <div
-        className="absolute top-0 left-0 w-full h-full bg-cover bg-center"
+        className="absolute top-0 left-0 w-full h-full bg-cover bg-center bb"
         style={{
-          backgroundImage: "url('https://i.ibb.co/DKvdpvv/hospital-bed-vn-background-by-drechenaux-dg83a9z-pre.jpg')",
+         // backgroundImage: "url('../../../public/hospital_bed_vn_background_by_drechenaux_dg83a9z-pre.jpg')",
         //   transform: `translateY(${offsetY * 0.5}px)`,
           transition: 'transform 0.1s ease-out',
           backgroundSize: "cover",

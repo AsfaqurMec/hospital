@@ -21,6 +21,7 @@ import img17 from '../../../public/Screenshot 2024-08-21 192534.png'
 // import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 import AOS from 'aos';
+import { useSession } from 'next-auth/react';
 
 
 
@@ -28,6 +29,9 @@ import AOS from 'aos';
 
 
 const page = () => {
+
+const session = useSession();
+
    AOS.init({});
     const [isLoading, setLoading] = useState(true);
 
