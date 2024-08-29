@@ -1,8 +1,9 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react-hooks/rules-of-hooks */
 'use client';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 import AOS from 'aos';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 //import { useSession } from "next-auth/react";
 import Link from "next/link";
@@ -11,10 +12,29 @@ import { useRouter } from 'next/navigation';
 
 
 
-const page = () => {
+const page =  () => {
     const router = useRouter();
     const  session  = useSession();
     //console.log(session?.data?.user);
+
+    const [bookings, setBooking] = useState([]);
+    const loadData = async () => {
+      const resp = await fetch(
+        `http://localhost:3000/account/api?email=${session?.data?.user?.email}`
+      );
+      const data = await resp.json();
+    // console.log(resp);
+     
+      setBooking(data?.myBookings);
+      console.log(bookings);
+    }; 
+       
+    setTimeout(()=> {
+        loadData();
+    },1000);
+       
+      
+        
     
     AOS.init({});
 
@@ -23,6 +43,7 @@ const page = () => {
         signOut();
         router.push("/");
       }
+
 
 
 
@@ -48,7 +69,26 @@ const page = () => {
                        <h1 className="mb-5 font-serif text-xl">Appointment History :</h1>
                        <div className="flex flex-col gap-5 mb-10">
                       
+                       {
+              bookings?.map(user =><div key={user._id} className="flex flex-col gap-2 border-2 p-2">
+                      <div className="flex  gap-20">
+                          <h1 className="font-semibold">Name : {user?.name}</h1>
+                          <h1 className="font-semibold">Email : ${user?.email}</h1>
+                       </div>
+                      
+                       <div className="flex  gap-20">
+                       
+                          <h1 className="font-semibold">Date & time : {user?.date} | {user?.time}</h1>
+                          <h1 className="font-semibold">Doctor : ${user?.doctor}</h1>
+                       </div>
+
+                       
               </div>
+
+              )}
+
+
+                       </div>
                        <div className="flex flex-col gap-5">
                        <h1 className="font-serif text-xl">Account Details :</h1>
                         <h1 className="text-xl pb-5 border-b-2">Name : {session?.data?.user?.name} <span className="ml-10"></span></h1>

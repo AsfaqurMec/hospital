@@ -40,14 +40,12 @@ const Footer = () => {
     <a className="link link-hover text-base font-semibold">8 AM - 5 PM , Monday - Saturday</a>
   </nav>
   
-  <form>
+  <form className='hidden md:block'>
     <h6 className="footer-title text-xl mb-3 text-[#eb966e] opacity-100">Newsletter</h6>
     <h1 className='text-lg font-semibold'>Subscribe To Our Newsletter</h1>
     <p className='text-base text-slate-300 my-1'>Stay informed and never miss out on the <br /> latest news, health tips.</p>
-    <fieldset className="form-control w-80">
-      <label className="label">
-        
-      </label>
+    <fieldset className="form-control w-80 ">
+    
       <div className="join">
         <input
           type="text"

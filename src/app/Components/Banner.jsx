@@ -12,8 +12,8 @@ const Banner = () => {
   
     return (
         <div>
-       <div className="hero bg-[#07332f] pb-20 lg:pb-0 min-h-screen pt-20">
-  <div className="hero-content flex-col lg:flex-row-reverse px-3 gap-20 lg:gap-0">
+       <div className="md:hero bg-[#07332f] pb-20 lg:pb-0 min-h-screen pt-20">
+  <div className="flex md:hero-content flex-col lg:flex-row-reverse px-3 gap-20 lg:gap-0">
     <Image data-aos="fade-up"  data-aos-duration="2000" src={banner} alt='banner' className="w-[90%] mx-auto md:max-w-xl"></Image>
     {/* <img
       src={banner}
@@ -26,7 +26,7 @@ const Banner = () => {
       <p data-aos="fade-up"  data-aos-duration="1000" data-aos-delay="500" className="py-6 text-xl text-slate-400">
       our is to deliver the highest quality healthcare services. We believe that everyone deserves access to excellent medical care without compromising on quality.
       </p>
-      <div data-aos="fade-up"  data-aos-duration="1000" data-aos-delay="600" className='flex gap-5'>
+      <div data-aos="fade-up"  data-aos-duration="1000" data-aos-delay="600" className='flex flex-col md:flex-row gap-5'>
       <button className="btn bg-transparent font-semibold text-xl rounded-xl border-2 text-[#f7a582] btn-outline hover:bg-left">Read More</button>
       <button className="btn bg-transparent font-semibold text-xl text-[#ffffffd7] border-none">Watch video</button>
       </div>

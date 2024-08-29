@@ -43,7 +43,7 @@ const About = () => {
                    </div>
                    <button className="btn rounded-none w-full bg-black border-none text-white">Make Appointment</button>
                 </div>
-                <div className=" h-[450px] lg:h-56 w-full lg:w-2/3 flex flex-col lg:flex-row bg-[#07332f] p-3">
+                <div className="h-[580px] md:h-[490px] lg:h-56 w-full lg:w-2/3 flex flex-col lg:flex-row bg-[#07332f] p-3">
                    <div className="w-full lg:w-1/2 p-8 gap-3 flex flex-col justify-center font-semibold text-white text-xl border-b-2 lg:border-b-0 border-r-0 lg:border-r-2">
                       <Image src={img1} alt="logo"></Image>
                       <h1>Need family health</h1>
@@ -64,8 +64,8 @@ const About = () => {
 
             <section>
 
-            <div className="hero bg-[#fff7f3] pb-20 lg:pb-0 min-h-screen">
-  <div className="hero-content flex-col-reverse lg:flex-row px-3 gap-20 lg:gap-10">
+            <div className="md:hero bg-[#fff7f3] pb-20 lg:pb-0 min-h-screen">
+  <div className="flex md:hero-content flex-col-reverse lg:flex-row px-3 gap-20 lg:gap-10">
     <Image data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200" src={banner} alt='banner' className="w-[90%] mx-auto md:max-w-xl"></Image>
     {/* <img
       src={banner}
@@ -182,7 +182,7 @@ const About = () => {
    <section className="bg-[#fceee7] pt-10 pb-20">
 
        <div className="flex flex-col gap-10 justify-evenly items-center lg:flex-row py-14 w-full lg:w-[80%] mx-auto">
-       <div className="w-full lg:w-1/2 flex flex-col justify-center items-center lg:items-start lg:justify-start gap-3  font-semibold text-black text-5xl py-10">
+       <div className="w-full lg:w-1/2 flex flex-col justify-center items-center lg:items-start lg:justify-start gap-3  font-semibold text-black text-2xl md:text-5xl py-10">
                 <p data-aos="zoom-down" data-aos-duration="1000" className='uppercase tracking-widest text-xl text-[#f29269] font-medium'>how we work</p>
                       <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">A Comprehensive</h1>
                       <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Directory For Your</h1>
@@ -223,15 +223,17 @@ const About = () => {
 
       <section>
 
-<div className="hero bg-[#fef9f6] pb-20 lg:pb-0 min-h-screen">
-<div className="hero-content flex-col-reverse lg:flex-row px-3 gap-20 lg:gap-10">
-<Image data-aos="flip-right" data-aos-duration="2000" src={img13} alt='banner' className="w-[90%] mx-auto md:max-w-xl"></Image>
+<div className="md:hero bg-[#fef9f6] pb-20 lg:pb-0 min-h-screen">
+<div className="flex md:hero-content flex-col-reverse lg:flex-row px-3 gap-20 lg:gap-10">
+   <div className="w-full mx-auto lg:w-1/2">
+<Image data-aos="flip-right" data-aos-duration="2000" src={img13} className="w-full" alt='banner' ></Image>
+</div>
 {/* <img
 src={banner}
 className="max-w-sm rounded-lg shadow-2xl" /> */}
-<div className='px-10 md:px-5'>
+<div className='px-8 md:px-5 w-full  lg:w-1/2'>
 <p data-aos="zoom-down" data-aos-duration="1000"  className='uppercase tracking-widest text-xl text-[#f29269] font-medium'>faqs</p>
-<h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" className="text-5xl font-bold  mt-3">Consultations with</h1>
+<h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" className="text-2xl md:text-5xl font-bold  mt-3">Consultations with</h1>
 <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" className="text-5xl font-bold  my-2">Qualified doctors.</h1>
 
 
