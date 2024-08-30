@@ -18,7 +18,9 @@ import 'aos/dist/aos.css'; // You can also use <link> for styles
 import AOS from 'aos';
 
 const page = () => {
-   AOS.init({});
+   useEffect(() => {
+      AOS.init({});
+  }, []); // The empty dependency array ensures this runs only once on mount
     const [isLoading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -47,9 +49,9 @@ const page = () => {
 
           <section>
 
-<div className="hero bg-[#fff7f3] pb-20 lg:pb-0 min-h-screen">
-<div className="hero-content flex-col-reverse lg:flex-row px-3 gap-20 lg:gap-10">
-<Image data-aos="flip-left" data-aos-duration="2000" src={banner} alt='banner' className="w-[90%] mx-auto md:max-w-xl"></Image>
+<div className="md:hero bg-[#fff7f3] pb-20 lg:pb-0 min-h-screen">
+<div className="flex md:hero-content flex-col-reverse lg:flex-row px-3 gap-20 lg:gap-10">
+<Image data-aos="flip-left" data-aos-duration="2000" src={banner} alt='banner' className="w-[90%] mx-auto md:max-w-xl" priority></Image>
 {/* <img
 src={banner}
 className="max-w-sm rounded-lg shadow-2xl" /> */}
@@ -77,9 +79,9 @@ Our family-centered approach to healthcare ensures that each member of your fami
 
 <section>
 
-<div className="hero bg-[#07332f] pb-20 lg:pb-0 min-h-screen">
-<div className="hero-content flex-col-reverse lg:flex-row px-3 gap-20 lg:gap-10">
-<Image data-aos="flip-right" data-aos-duration="2000" src={img13} alt='banner' className="w-[90%] mx-auto md:max-w-xl"></Image>
+<div className="md:hero bg-[#07332f] pb-20 lg:pb-0 min-h-screen">
+<div className="flex md:hero-content flex-col-reverse lg:flex-row px-3 gap-20 lg:gap-10">
+<Image data-aos="flip-right" data-aos-duration="2000" src={img13} alt='banner' priority className="w-[90%] mx-auto md:max-w-xl"></Image>
 {/* <img
 src={banner}
 className="max-w-sm rounded-lg shadow-2xl" /> */}
@@ -114,7 +116,7 @@ we offer a wide range of comprehensive healthcare services to address all aspect
        
   
                 <div data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100" className=" flex flex-col justify-center gap-3   text-black text-2xl font-normal p-10">
-                <Image src={img14} className="rounded-md" alt="logo"></Image>
+                <Image src={img14} className="rounded-md" alt="logo" priority></Image>
                       <h1>Best Medical Network Directory For Physicians & Clients</h1>
                       <p className="text-base text-slate-400">Hypertension, commonly known as high blood pressure, is a prevalent</p>
                       <button className="text-lg rounded-none bg-[#f7a58200] border-none text-[#ef885b] text-left">Read More</button>
@@ -124,7 +126,7 @@ we offer a wide range of comprehensive healthcare services to address all aspect
 
                 
                 <div data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300" className=" flex flex-col justify-center gap-3   text-black text-2xl font-normal p-10">
-                <Image src={img15} className="rounded-md" alt="logo"></Image>
+                <Image src={img15} className="rounded-md" alt="logo" priority></Image>
                       <h1>The Importance of Regular Health Checkups</h1>
                       <p className="text-base text-slate-400">This symptoms, causes, risk factors, diagnosis, treatment options strategies.</p>
                       <button className="text-lg rounded-none bg-[#f7a58200] border-none text-[#ef885b] text-left">Read More</button>
@@ -134,7 +136,7 @@ we offer a wide range of comprehensive healthcare services to address all aspect
 
                 
                 <div data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="500" className=" flex flex-col justify-center gap-3   text-black text-2xl font-normal p-10">
-                <Image src={img16} className="rounded-md" alt="logo"></Image>
+                <Image priority src={img16} className="rounded-md" alt="logo"></Image>
                       <h1>Managing Better Stress for Better Mental Health</h1>
                       <p className="text-base text-slate-400">These stories can provide valuable insights into living with a particular condition</p>
                       <button className="text-lg rounded-none bg-[#f7a58200] border-none text-[#ef885b] text-left">Read More</button>
@@ -152,7 +154,7 @@ we offer a wide range of comprehensive healthcare services to address all aspect
 
 <div className="flex flex-col gap-10 justify-evenly items-center lg:flex-row py-14">
    <div className="flex flex-col justify-center lg:flex-row items-center gap-8 text-white">
-       <Image src={img8} alt="o"></Image>
+       <Image priority src={img8} alt="o"></Image>
        <div className="text-center lg:text-left">
            <h1 data-aos="zoom-in-up" data-aos-duration="1000" className="text-4xl mb-5">Open For Appointments</h1>
            <p data-aos="zoom-in-down" data-aos-duration="1000">we are delighted to announce that our doors are open, and we are now accepting <br /> appointments to serve you better.</p>
@@ -176,7 +178,7 @@ we offer a wide range of comprehensive healthcare services to address all aspect
    
 
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" className=" flex flex-col justify-center gap-3   text-black text-2xl font-normal p-10">
-            <Image src={img4} className="rounded-md" alt="logo"></Image>
+            <Image priority src={img4} className="rounded-md" alt="logo"></Image>
             <button className="text-lg rounded-none bg-[#f7a58200] border-none text-[#ef885b] text-left">family physician</button>
                   <h1>dr. elizabeth foster</h1>
                   <p className="text-base text-slate-400">Compassionate care for all ages.</p>
@@ -186,7 +188,7 @@ we offer a wide range of comprehensive healthcare services to address all aspect
 
             
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" className=" flex flex-col justify-center gap-3   text-black text-2xl font-normal p-10">
-            <Image src={img5} className="rounded-md" alt="logo"></Image>
+            <Image priority src={img5} className="rounded-md" alt="logo"></Image>
             <button className="text-lg rounded-none bg-[#f7a58200] border-none text-[#ef885b] text-left">surgeon</button>
                   <h1>dr. david lee</h1>
                   <p className="text-base text-slate-400">Skillful hands, transforming lives.</p>
@@ -196,14 +198,14 @@ we offer a wide range of comprehensive healthcare services to address all aspect
 
             
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" className=" flex flex-col justify-center gap-3   text-black text-2xl font-normal p-10">
-            <Image src={img6} className="rounded-md" alt="logo"></Image>
+            <Image priority src={img6} className="rounded-md" alt="logo"></Image>
             <button className="text-lg rounded-none bg-[#f7a58200] border-none text-[#ef885b] text-left">cardiologist</button>
                   <h1>dr. ava white</h1>
                   <p className="text-base text-slate-400">Mental wellness and guiding..</p>
                </div>
                
                <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" className=" flex flex-col justify-center gap-3   text-black text-2xl font-normal p-10">
-            <Image src={img7} className="rounded-md" alt="logo"></Image>
+            <Image priority src={img7} className="rounded-md" alt="logo"></Image>
             <button className="text-lg rounded-none bg-[#f7a58200] border-none text-[#ef885b] text-left">dermatologist</button>
                   <h1>Dr. Daniel Brown</h1>
                   <p className="text-base text-slate-400">Focuses on skin, hair disorders.</p>

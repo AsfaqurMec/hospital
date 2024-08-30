@@ -1,5 +1,6 @@
-/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react-hooks/rules-of-hooks */
+/* eslint-disable react/no-unescaped-entities */
+
 "use client"
 import React, { useEffect, useState } from 'react';
 import Spinner from '../Components/Spinner';
@@ -11,7 +12,9 @@ import img1 from '../../../public/Screenshot 2024-08-22 123546.png'
 import img2 from '../../../public/Screenshot 2024-08-22 123620.png'
 
 const page = () => {
+  useEffect(() => {
     AOS.init({});
+}, []); // The empty dependency array ensures this runs only once on mount
     const [isLoading, setLoading] = useState(true);
 
     useEffect(() => {

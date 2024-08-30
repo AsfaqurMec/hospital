@@ -21,18 +21,16 @@ import img17 from '../../../public/Screenshot 2024-08-21 192534.png'
 // import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 import AOS from 'aos';
-import { useSession } from 'next-auth/react';
-
-
-
 
 
 
 const page = () => {
 
-const session = useSession();
+   useEffect(() => {
+      AOS.init({});
+  }, []); // The empty dependency array ensures this runs only once on mount
 
-   AOS.init({});
+  
     const [isLoading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -67,7 +65,7 @@ const session = useSession();
 
            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" className="bg-[#07332f] text-white w-full border-[1px] border-black flex flex-col justify-center gap-3 p-10">
                 
-                <Image src={img8} alt="logo"></Image>
+                <Image src={img8} alt="logo" priority></Image>
                       <h1 className='text-2xl font-semibold'>cardiology clinic</h1>
                       <p className="text-base text-slate-400">Expert consultations with board-certified cardiologists to assess heart health, discuss symptoms, and develop personalized treatment.</p>
                       <div className=" my-3 space-y-3">
@@ -82,7 +80,7 @@ const session = useSession();
 
                 <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" className="bg-[#07332f] text-white w-full border-[1px] border-black flex flex-col justify-center gap-3 p-10">
                 
-                <Image src={img9} alt="logo"></Image>
+                <Image src={img9} alt="logo" priority></Image>
                       <h1 className='text-2xl font-semibold'>pathology clinic</h1>
                       <p className="text-base text-slate-400">Comprehensive tests to analyze body fluids, aiding in the diagnosis and monitoring of organ function and metabolic disorders.</p>
                       <div className=" my-3 space-y-3">
@@ -97,7 +95,7 @@ const session = useSession();
 
                 <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" className="bg-[#07332f] text-white w-full border-[1px] border-black flex flex-col justify-center gap-3 p-10">
                 
-                <Image src={img10} alt="logo"></Image>
+                <Image src={img10} alt="logo" priority></Image>
                       <h1 className='text-2xl font-semibold'>laboratory analysis</h1>
                       <p className="text-base text-slate-400">Our Laboratory Analysis Services offer a comprehensive range of advanced tests to aid in the accurate diagnosis. metabolic disorders.</p>
                       <div className=" my-3 space-y-3">
@@ -112,7 +110,7 @@ const session = useSession();
 
                 <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" className="bg-[#07332f] text-white w-full border-[1px] border-black flex flex-col justify-center gap-3 p-10">
                 
-                <Image src={img11} alt="logo"></Image>
+                <Image src={img11} alt="logo" priority></Image>
                       <h1 className='text-2xl font-semibold'>pediatric clinic</h1>
                       <p className="text-base text-slate-400">Comprehensive well-child checkups, growth monitoring, and developmental assessments to ensure your child's health track.</p>
                       <div className=" my-3 space-y-3">
@@ -127,7 +125,7 @@ const session = useSession();
 
                 <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" className="bg-[#07332f] text-white w-full border-[1px] border-black flex flex-col justify-center gap-3 p-10">
                 
-                <Image src={img12} alt="logo"></Image>
+                <Image src={img12} alt="logo" priority></Image>
                       <h1 className='text-2xl font-semibold'>cardiac clinic</h1>
                       <p className="text-base text-slate-400">Find comprehensive care and support for heart failure patients, including lifestyle recommendations and advanced therapies.</p>
                       <div className=" my-3 space-y-3">
@@ -142,7 +140,7 @@ const session = useSession();
 
                 <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" className="bg-[#07332f] text-white w-full border-[1px] border-black flex flex-col justify-center gap-3 p-10">
                 
-                <Image src={img13} alt="logo"></Image>
+                <Image src={img13} alt="logo" priority></Image>
                       <h1 className='text-2xl font-semibold'>neurology clinic</h1>
                       <p className="text-base text-slate-400">Consultations with specialized neurologists to address various neurological concerns, symptoms, and disorders.</p>
                       <div className=" my-3 space-y-3">
@@ -177,22 +175,22 @@ const session = useSession();
 <div className="w-[90%] md:w-[80%] mx-auto grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-5">
 
 <div data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="100" className="flex flex-col justify-center items-center gap-5 text-black border-[1px] border-black py-7">
-     <Image src={img14} alt="o"></Image>
+     <Image src={img14} alt="o" priority></Image>
      <h1 className="text-base font-semibold md:text-xl mb-5">Cardiology</h1>
  </div>
 
  <div data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="200" className="flex flex-col justify-center items-center gap-5 text-black border-[1px] border-black py-7">
-     <Image src={img15} alt="o"></Image>
+     <Image src={img15} alt="o" priority></Image>
      <h1 className="text-base font-semibold md:text-xl mb-5">Diagnostics</h1>
  </div>
 
  <div data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="300" className="flex flex-col justify-center items-center gap-5 text-black border-[1px] border-black py-7">
-     <Image src={img16} alt="o"></Image>
+     <Image src={img16} alt="o" priority></Image>
      <h1 className="text-base font-semibold md:text-xl mb-5">Virology</h1>
  </div>
 
  <div data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="400" className="flex flex-col justify-center items-center gap-5 text-black border-[1px] border-black py-7">
-     <Image src={img17} alt="o"></Image>
+     <Image src={img17} alt="o" priority></Image>
      <h1 className="text-base font-semibold md:text-xl mb-5">Therapy</h1>
  </div>
 </div>
@@ -216,7 +214,7 @@ const session = useSession();
    
 
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" className=" flex flex-col justify-center gap-3   text-black text-2xl font-normal p-10">
-            <Image src={img4} className="rounded-md" alt="logo"></Image>
+            <Image src={img4} className="rounded-md" alt="logo" priority></Image>
             <button className="text-lg rounded-none bg-[#f7a58200] border-none text-[#ef885b] text-left">family physician</button>
                   <h1>dr. elizabeth foster</h1>
                   <p className="text-base text-slate-400">Compassionate care for all ages.</p>
@@ -226,7 +224,7 @@ const session = useSession();
 
             
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" className=" flex flex-col justify-center gap-3   text-black text-2xl font-normal p-10">
-            <Image src={img5} className="rounded-md" alt="logo"></Image>
+            <Image src={img5} className="rounded-md" alt="logo" priority></Image>
             <button className="text-lg rounded-none bg-[#f7a58200] border-none text-[#ef885b] text-left">surgeon</button>
                   <h1>dr. david lee</h1>
                   <p className="text-base text-slate-400">Skillful hands, transforming lives.</p>
@@ -236,14 +234,14 @@ const session = useSession();
 
             
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" className=" flex flex-col justify-center gap-3   text-black text-2xl font-normal p-10">
-            <Image src={img6} className="rounded-md" alt="logo"></Image>
+            <Image src={img6} className="rounded-md" alt="logo" priority></Image>
             <button className="text-lg rounded-none bg-[#f7a58200] border-none text-[#ef885b] text-left">cardiologist</button>
                   <h1>dr. ava white</h1>
                   <p className="text-base text-slate-400">Mental wellness and guiding..</p>
                </div>
                
                <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" className=" flex flex-col justify-center gap-3   text-black text-2xl font-normal p-10">
-            <Image src={img7} className="rounded-md" alt="logo"></Image>
+            <Image src={img7} className="rounded-md" alt="logo" priority></Image>
             <button className="text-lg rounded-none bg-[#f7a58200] border-none text-[#ef885b] text-left">dermatologist</button>
                   <h1>Dr. Daniel Brown</h1>
                   <p className="text-base text-slate-400">Focuses on skin, hair disorders.</p>

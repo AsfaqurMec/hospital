@@ -4,11 +4,14 @@ import banner from '../../../public/Screenshot 2024-08-19 022530.png'
 // import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 import AOS from 'aos';
+import { useEffect } from 'react';
 
 
 const Banner = () => {
   
+  useEffect(() => {
     AOS.init({});
+}, []); // The empty dependency array ensures this runs only once on mount
   
     return (
         <div>

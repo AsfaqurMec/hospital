@@ -1,8 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react-hooks/rules-of-hooks */
 'use client';
-import 'aos/dist/aos.css'; // You can also use <link> for styles
-import AOS from 'aos';
+
 import React, { useEffect, useState } from 'react';
 
 //import { useSession } from "next-auth/react";
@@ -20,7 +19,7 @@ const page =  () => {
     const [bookings, setBooking] = useState([]);
     const loadData = async () => {
       const resp = await fetch(
-        `http://localhost:3000/account/api?email=${session?.data?.user?.email}`
+        `https://hospital-mu-six.vercel.app/account/api?email=${session?.data?.user?.email}`
       );
       const data = await resp.json();
     // console.log(resp);
@@ -31,12 +30,12 @@ const page =  () => {
        
     setTimeout(()=> {
         loadData();
-    },1000);
+    },1500);
        
       
         
     
-    AOS.init({});
+    
 
     const handleLogout = () => {
         

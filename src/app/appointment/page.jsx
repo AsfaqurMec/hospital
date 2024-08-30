@@ -39,7 +39,7 @@ const page = () => {
       doctor: event.target.doctor.value,
       message: event.target.message.value,
     };
-    const resp = await fetch("http://localhost:3000/appointment/api", {
+    const resp = await fetch("https://hospital-mu-six.vercel.app/appointment/api", {
       method: "POST",
       body: JSON.stringify(newAppointment),
       headers: {
