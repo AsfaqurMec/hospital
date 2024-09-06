@@ -1,6 +1,7 @@
 import { connectDB } from "../../../../../lib/connectDB";
 import NextAuth from "next-auth/next";
 import CredentialsProvider from "next-auth/providers/credentials";
+import toast from "react-hot-toast";
 
 
 const handler = NextAuth({
@@ -28,6 +29,7 @@ const handler = NextAuth({
         }
         
         if (currentUser.email === email && currentUser.password === password) {
+          toast.success('Login Successfully');
             return currentUser;
         }
        // return currentUser;

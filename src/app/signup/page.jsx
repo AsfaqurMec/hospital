@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { Suspense } from "react";
+import toast, { Toaster } from "react-hot-toast";
 // import { BsGithub, BsGoogle } from "react-icons/bs";
 
 const SignUpPage = () => {
@@ -21,7 +22,10 @@ const SignUpPage = () => {
       },
     });
     if (resp.status === 200) {
+      toast.success("SignUp Successfully");
       event.target.reset();
+    }else {
+      toast.error("Something went Wrong");
     }
   };
 
@@ -76,6 +80,7 @@ const SignUpPage = () => {
           </div>
         </div>
       </div>
+      <Toaster></Toaster>
     </div>
   );
 };
