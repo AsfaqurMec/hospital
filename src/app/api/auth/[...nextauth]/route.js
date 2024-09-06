@@ -1,7 +1,7 @@
 import { connectDB } from "../../../../../lib/connectDB";
 import NextAuth from "next-auth/next";
 import CredentialsProvider from "next-auth/providers/credentials";
-import toast from "react-hot-toast";
+import toast, { Toaster } from "react-hot-toast";
 
 
 const handler = NextAuth({
@@ -29,7 +29,7 @@ const handler = NextAuth({
         }
         
         if (currentUser.email === email && currentUser.password === password) {
-          toast.success('Login Successfully');
+         // toast.success('Login Successfully');
             return currentUser;
         }
        // return currentUser;
@@ -44,7 +44,7 @@ const handler = NextAuth({
   callbacks: {
     async signIn({ user }) {
         // console.log(user);
-         
+        //toast.success('Login Successfully');
          return !!user;  // Return true to proceed with login
        },
        async jwt({ token, user }) {
@@ -74,6 +74,7 @@ const handler = NextAuth({
          return session;
        },
   },
+ 
 });
 
 export { handler as GET, handler as POST };

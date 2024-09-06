@@ -22,6 +22,8 @@ const Page = () => {
       redirect: true,
       callbackUrl: "/",
     });
+    console.log(resp);
+    
   };
 
   return (
