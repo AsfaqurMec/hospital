@@ -7,6 +7,7 @@ import Footer from "./Components/Footer";
 import Spinner from "./Components/Spinner";
 import Image from "next/image";
 import AuthProvider from "../../services/AuthProvider";
+import { Toaster } from "react-hot-toast";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +22,7 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en" data-theme="light">
+
    <AuthProvider>
       <body className={inter.className}>
          
@@ -33,9 +35,10 @@ export default function RootLayout({ children }) {
              </div>
          {/* } */}
         
-
+         <Toaster></Toaster>
         </body>
         </AuthProvider>
+        
     </html>
   );
 }

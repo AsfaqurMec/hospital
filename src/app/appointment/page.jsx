@@ -11,6 +11,7 @@ import img16 from '../../../public/Screenshot 2024-08-19 190914.png'
 import img17 from '../../../public/Screenshot 2024-08-19 190930.png'
 import Spinner from '../Components/Spinner';
 import { useSession } from 'next-auth/react';
+import toast, { Toaster } from 'react-hot-toast';
 
 
 const page = () => {
@@ -47,7 +48,10 @@ const page = () => {
       },
     });
     if (resp.status === 200) {
+      toast.success('Appointment Created Successfully');
       event.target.reset();
+    }else {
+      toast.error('Something Went Wrong');
     }
   };
 
@@ -85,6 +89,7 @@ const page = () => {
                  className='w-full px-3 py-2 border-[#e2b29d] rounded-md border-2 focus:outline-none bg-transparent text-gray-400'
                  data-temp-mail-org='0'
                  defaultValue={session?.data?.user?.name}
+                 required
                />
              </div>
              <div className='w-full md:w-1/2'>
@@ -113,6 +118,7 @@ const page = () => {
                  placeholder='Your Number'
                  className='w-full px-3 py-2 border-[#e2b29d] rounded-md border-2 focus:outline-none bg-transparent text-gray-400'
                  data-temp-mail-org='0'
+                 required
                />
              </div>
              <div className='w-full md:w-1/2'>
@@ -140,11 +146,12 @@ const page = () => {
                  placeholder='Appointment time'
                  className='w-full px-3 py-2 border-[#e2b29d] rounded-md border-2 focus:outline-none bg-transparent text-gray-400'
                  data-temp-mail-org='0'
+                 required
                />
              </div>
              <div className='w-full md:w-1/2'>
                
-             <select id='doctor' className="py-3 w-full outline-transparent px-3  border-[#e2b29d] rounded-md border-2 focus:outline-none bg-transparent text-gray-400">
+             <select id='doctor' className="py-3 w-full outline-transparent px-3  border-[#e2b29d] rounded-md border-2 focus:outline-none bg-transparent text-gray-400" required>
   <option disabled selected>Select Doctor</option>
   <option value='Dr. Elizabeth foster'>Dr. Elizabeth foster</option>
   <option value='Dr. David lee'>Dr. David lee</option>
@@ -225,7 +232,7 @@ const page = () => {
 
         </div>
         }
-        
+        <Toaster></Toaster>
         </>
     );
 };
